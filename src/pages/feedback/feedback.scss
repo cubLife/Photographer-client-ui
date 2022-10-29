@@ -1,0 +1,50 @@
+.feedbackContainer {
+  padding: 10px;
+  display: flex;
+
+  .left {
+    position: fixed;
+    max-height: 600px;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: black;
+    // background-color: aliceblue;
+    flex: 2;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 5px;
+
+    .top {
+      text-align: center;
+
+      .title {
+        margin-top: 10px;
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 5), 0 2px 4px rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+
+  .right {
+    flex: 6;
+
+    .top {
+      text-align: center;
+
+      .title {
+        margin-top: 10px;
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 5), 0 2px 4px rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+}

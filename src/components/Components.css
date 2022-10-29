@@ -1,0 +1,54 @@
+.Text-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Border-radius {
+  border-radius: 8%;
+}
+
+.Text-stile {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50fr;
+  line-height: 50fr;
+  text-transform: uppercase;
+  display: inline-block;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 5), 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hover:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.social-container {
+  padding: 25px 50px;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: rgb(11, 1, 1);
+}

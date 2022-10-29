@@ -1,0 +1,6 @@
+.backgroundImage {
+  background-image: url("../src/components/sony-a7c-camera-top-view-picjumbo-com.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,58 @@
+.offerCard {
+  padding: 0;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  margin: 10px;
+
+  .top {
+    text-align: center;
+    border-bottom: 1px solid rgb(112, 112, 112);
+    .title {
+      font-size: 30px;
+      font-weight: bolder;
+    }
+  }
+
+  .bottom {
+    margin: 5px;
+    .offer {
+      .offerItem {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+          display: flex;
+          align-items: center;
+          .icon {
+            font-size: 30px;
+            color: rgb(90, 105, 215);
+          }
+          span {
+            font-size: 13px;
+            color: rgb(168, 167, 167);
+          }
+        }
+        .right {
+          font-size: 30px;
+          font-weight: bolder;
+
+          .price {
+            font-size: 50px;
+          }
+        }
+      }
+    }
+    .button {
+      text-align: center;
+      border: 1px solid rgb(185, 184, 184);
+      border-radius: 5px;
+      color: rgb(9, 117, 16);
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(228, 235, 228);
+      }
+    }
+  }
+}
