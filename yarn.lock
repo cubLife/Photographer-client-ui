@@ -2902,15 +2902,6 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-aphrodite@^2.2.2:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/aphrodite/-/aphrodite-2.4.0.tgz"
-  integrity sha512-1rVRlLco+j1YAT5aKEE8Wuw5zWV+tI41/quEheJAG0vNaGHE64iJ/a2SiVMz8Uc80VdP2/Hjlfd2bPJOWsqJuQ==
-  dependencies:
-    asap "^2.0.3"
-    inline-style-prefixer "^5.1.0"
-    string-hash "^1.1.3"
-
 arg@^5.0.2:
   version "5.0.2"
   resolved "https://registry.npmjs.org/arg/-/arg-5.0.2.tgz"
@@ -2998,7 +2989,7 @@ array.prototype.reduce@^1.0.4:
     es-array-method-boxes-properly "^1.0.0"
     is-string "^1.0.7"
 
-asap@^2.0.3, asap@~2.0.6:
+asap@~2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/asap/-/asap-2.0.6.tgz"
   integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
@@ -4160,7 +4151,7 @@ dom-converter@^0.2.0:
   dependencies:
     utila "~0.4"
 
-dom-helpers@^3.2.0, dom-helpers@^3.4.0:
+dom-helpers@^3.2.0:
   version "3.4.0"
   resolved "https://registry.npmjs.org/dom-helpers/-/dom-helpers-3.4.0.tgz"
   integrity sha512-LnuPJ+dwqKDIyotW1VzmOZ5TONUN7CwkCR5hrgawTUbkBGYdeoNLZo6nNfGkCrjtE1nXXaj7iMMpDa8/d9WoIA==
@@ -4725,7 +4716,7 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-exenv@^1.2.1, exenv@^1.2.2:
+exenv@^1.2.1:
   version "1.2.2"
   resolved "https://registry.npmjs.org/exenv/-/exenv-1.2.2.tgz"
   integrity sha512-Z+ktTxTwv9ILfgKCk32OX3n/doe+OcLTRtqK9pcL+JsP3J1/VW8Uvl4ZjLlKqeW4rzK4oesDOGMEMRIZqtP4Iw==
@@ -5179,11 +5170,6 @@ gzip-size@^6.0.0:
   dependencies:
     duplexer "^0.1.2"
 
-hamming-distance@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/hamming-distance/-/hamming-distance-1.0.0.tgz"
-  integrity sha1-Ob+kbGHznodCHkA1ob5Pcl3XuTE=
-
 handle-thing@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/handle-thing/-/handle-thing-2.0.1.tgz"
@@ -5434,18 +5420,6 @@ ignore@^5.2.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-imagekit@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/imagekit/-/imagekit-4.1.1.tgz#94525363e0aeadfe6658e0e1b173398292f18ec7"
-  integrity sha512-pL0SWR8FXq8gtzyhWM19h8/Vjr6XNAbAO8YeiHinbs9b0KKNFhuDA5ehksqsPaMHAaB1MebUdoz77SwqCIwIoA==
-  dependencies:
-    axios "^0.27.2"
-    form-data "^4.0.0"
-    hamming-distance "^1.0.0"
-    lodash "^4.17.15"
-    tslib "^2.4.0"
-    uuid "^8.3.2"
-
 imagesloaded@^4.1.1:
   version "4.1.4"
   resolved "https://registry.npmjs.org/imagesloaded/-/imagesloaded-4.1.4.tgz"
@@ -5518,13 +5492,6 @@ inline-style-prefixer@^3.0.6:
   integrity sha512-ne8XIyyqkRaNJ1JfL1NYzNdCNxq+MCBQhC8NgOQlzNm2vv3XxlP0VSLQUbSRCF6KPEoveCVEpayHoHzcMyZsMQ==
   dependencies:
     bowser "^1.7.3"
-    css-in-js-utils "^2.0.0"
-
-inline-style-prefixer@^5.1.0:
-  version "5.1.2"
-  resolved "https://registry.npmjs.org/inline-style-prefixer/-/inline-style-prefixer-5.1.2.tgz"
-  integrity sha512-PYUF+94gDfhy+LsQxM0g3d6Hge4l1pAqOSOiZuHWzMvQEGsbRQ/ck2WioLqrY2ZkHyPgVUXxn+hrkF7D6QUGbA==
-  dependencies:
     css-in-js-utils "^2.0.0"
 
 internal-slot@^1.0.3:
@@ -6596,11 +6563,6 @@ mdb-react-ui-kit@^4.1.0:
     "@popperjs/core" "2.11.5"
     clsx "1.1.1"
     react-popper "2.3.0"
-
-mdbootstrap@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.npmjs.org/mdbootstrap/-/mdbootstrap-4.20.0.tgz"
-  integrity sha512-eIxaYsvHct2BKqkJWphh6j7nFQXHh9NjbbN7a+dctfrVsKaydNW5XpKIxmq2tDSb9+XYGm9hK7hMTlHgeV6wdw==
 
 mdn-data@2.0.14:
   version "2.0.14"
@@ -7953,16 +7915,6 @@ react-hook-form@^7.34.2:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.34.2.tgz#9ac6d1a309a7c4aaa369d1269357a70e9e9bf4de"
   integrity sha512-1lYWbEqr0GW7HHUjMScXMidGvV0BE2RJV3ap2BL7G0EJirkqpccTaawbsvBO8GZaB3JjCeFBEbnEWI1P8ZoLRQ==
 
-react-images-viewer@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.npmjs.org/react-images-viewer/-/react-images-viewer-1.7.1.tgz"
-  integrity sha512-ZSdIObEO/DJrdOAUaGbWdugQmMEtv69RyaHyiUv8iWyB45bqynBU7ny4ghQkec+3yR/0DgQ4UYX+8LeduNFcpQ==
-  dependencies:
-    aphrodite "^2.2.2"
-    prop-types "^15.6.2"
-    react-scrolllock "^3.0.1"
-    react-transition-group "^2.4.0"
-
 react-is@^16.13.1, react-is@^16.3.2, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -8073,12 +8025,10 @@ react-scripts@^5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-react-scrolllock@^3.0.1:
-  version "3.0.2"
-  resolved "https://registry.npmjs.org/react-scrolllock/-/react-scrolllock-3.0.2.tgz"
-  integrity sha512-ZShCKvt4bxxhqngaegHsZuoTIUDt4QOHd0saJ/cfJAu0LwCOoRaQfRZe9UPT/bpDE944u/GhuTWBmGaW9YER7Q==
-  dependencies:
-    exenv "^1.2.2"
+react-simple-image-viewer@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-simple-image-viewer/-/react-simple-image-viewer-1.2.2.tgz#2a93413512b76ce8d336dd5fa19660a970d05be4"
+  integrity sha512-Vk9p6Glm7uE4cSEBGkqZPGC3qoZcAwd48nq5/JN13NKd9rUrUIWZWFEmRzO+FVwl6c0UdjSDkthGoaoiYeWVjg==
 
 react-sizeme@^2.2.0:
   version "2.6.12"
@@ -8120,16 +8070,6 @@ react-transition-group@^1.2.0:
     loose-envify "^1.3.1"
     prop-types "^15.5.6"
     warning "^3.0.0"
-
-react-transition-group@^2.4.0:
-  version "2.9.0"
-  resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-2.9.0.tgz"
-  integrity sha512-+HzNTCHpeQyl4MJ/bdE0u6XRMe9+XG/+aL4mCxVN4DnPBQ0/5bfHWPDuOZUzYdMj94daZaZdCCc1Dzt9R/xSSg==
-  dependencies:
-    dom-helpers "^3.4.0"
-    loose-envify "^1.4.0"
-    prop-types "^15.6.2"
-    react-lifecycles-compat "^3.0.4"
 
 react-transition-group@^4.4.2, react-transition-group@^4.4.5:
   version "4.4.5"
@@ -8746,11 +8686,6 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
 
-string-hash@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/string-hash/-/string-hash-1.1.3.tgz"
-  integrity sha1-6Kr8CsGFW0Zmkp7X3RJ1311sgRs=
-
 string-length@^4.0.1:
   version "4.0.2"
   resolved "https://registry.npmjs.org/string-length/-/string-length-4.0.2.tgz"
@@ -9173,7 +9108,7 @@ tslib@^1.8.1:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.3, tslib@^2.4.0:
+tslib@^2.0.3:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==

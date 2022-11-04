@@ -9,7 +9,6 @@
     border-radius: 10px;
     border: 1px solid;
     border-color: black;
-    // background-color: aliceblue;
     flex: 2;
     margin-top: 10px;
     margin-left: 20px;
@@ -20,12 +19,11 @@
 
       .title {
         margin-top: 10px;
-        color: aliceblue;
+        color: rgb(63, 75, 91);
         font-weight: bold;
         font-size: 20px;
         text-transform: uppercase;
         display: inline-block;
-        text-shadow: 0 0 8px rgba(0, 0, 0, 5), 0 2px 4px rgba(0, 0, 0, 0.7);
       }
     }
   }
@@ -38,12 +36,11 @@
 
       .title {
         margin-top: 10px;
-        color: aliceblue;
+        color: rgb(63, 75, 91);
         font-weight: bold;
         font-size: 20px;
         text-transform: uppercase;
         display: inline-block;
-        text-shadow: 0 0 8px rgba(0, 0, 0, 5), 0 2px 4px rgba(0, 0, 0, 0.7);
       }
     }
   }

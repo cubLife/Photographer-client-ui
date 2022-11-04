@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactImageViewer from "../ReactImageViewer";
-import StackGrid from "react-stack-grid";
 import axios from "axios";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
@@ -24,16 +23,17 @@ class ImageViewer extends Component {
       .then((data) => this.setState({ photos: data._embedded.photoDtoList }));
   }
 
-  handleImageClick = (event) => {
+  handleImageClick = (index) => {
     this.setState({
       isOpen: true,
-      currImg: event,
+      currImg: index,
     });
   };
 
   handleImageClose = (event) => {
     this.setState({
       isOpen: false,
+      currImg: 0,
     });
   };
 
@@ -51,9 +51,7 @@ class ImageViewer extends Component {
 
   getImages() {
     const images = [];
-    this.state.photos.map((photo) =>
-      images.push({ src: photo._links.image.href })
-    );
+    this.state.photos.map((photo) => images.push(photo._links.image.href));
     return images;
   }
 
@@ -68,8 +66,8 @@ class ImageViewer extends Component {
             <ImageListItem key={item.img}>
               <img
                 onClick={() => this.handleImageClick(index)}
-                src={`${item.src}?w=164&h=164&fit=crop&auto=format`}
-                srcSet={`${item.src}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                src={`${item}?w=164&h=164&fit=crop&auto=format`}
+                srcSet={`${item}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                 loading="lazy"
                 style={{
                   cursor: "pointer",
@@ -79,9 +77,9 @@ class ImageViewer extends Component {
           ))}
         </ImageList>
         <ReactImageViewer
-          imgs={images}
+          images={images}
           isOpen={this.state.isOpen}
-          onClose={() => this.handleImageClose()}
+          onClose={this.handleImageClose}
           currImg={this.state.currImg}
           onClickPrev={this.gotoPrevImg}
           onClickNext={this.gotoNextImg}

@@ -13,12 +13,12 @@ export default class ContactLayout extends Component {
         <Container className="mt-5">
           <Row className="row row--35 ">
             <Col lg={5}>
-              <h4 style={{ color: "white" }}>Napisz do mnie wiadomość</h4>
+              <h4 style={{ color: "#3f4b5b" }}>Napisz do mnie wiadomość</h4>
               <ContactMessageForm />
             </Col>
             <Col lg={7}>
-              <h4 style={{ color: "white" }}>Kontact</h4>
-              <h5 style={{ color: "white" }}>
+              <h4 style={{ color: "#3f4b5b" }}>Kontact</h4>
+              <h5 style={{ color: "#3f4b5b" }}>
                 {" "}
                 Nataly Aleksandrowa. Fotograf Bydgoszcz, Torun
               </h5>

@@ -6,7 +6,7 @@ export default class Contact extends Component {
       <div>
         <h1
           className="text-center text-uppercase mt-5"
-          style={{ color: "black" }}
+          style={{ color: "#3f4b5b" }}
         >
           Skontaktuj się ze mną
         </h1>

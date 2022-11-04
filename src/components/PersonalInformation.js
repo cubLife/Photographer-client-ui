@@ -18,7 +18,9 @@ export default class PersonalInformation extends Component {
   render() {
     return (
       <div>
-        <h1 className="font-weight-bolder x-large">O Mnie</h1>
+        <h1 className="font-weight-bolder x-large" style={{ color: "#3f4b5b" }}>
+          O Mnie
+        </h1>
         <p className="lead">{this.state.photographer.aboutMyself}</p>
       </div>
     );

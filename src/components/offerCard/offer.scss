@@ -1,15 +1,17 @@
 .offerCard {
+  background-color: rgb(236, 241, 247);
   padding: 0;
-  border: 1px solid rgb(112, 112, 112);
+  border: 1px solid rgb(63, 75, 91);
   border-radius: 5px;
   margin: 10px;
 
   .top {
     text-align: center;
-    border-bottom: 1px solid rgb(112, 112, 112);
+    border-bottom: 1px solid rgb(63, 75, 91);
     .title {
       font-size: 30px;
       font-weight: bolder;
+      color: rgb(63, 75, 91);
     }
   }
 
@@ -26,11 +28,11 @@
           align-items: center;
           .icon {
             font-size: 30px;
-            color: rgb(90, 105, 215);
+            color: rgb(63, 75, 91);
           }
           span {
             font-size: 13px;
-            color: rgb(168, 167, 167);
+            color: rgb(63, 75, 91);
           }
         }
         .right {
