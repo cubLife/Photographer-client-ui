@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
-import logo from "./logo.png";
+import logo from "./logo-brand.png";
 import { BrowserRouter as Router } from "react-router-dom";
 import Home from "../pages/Home";
 import Portfolio from "../pages/Portfolio";
@@ -17,14 +17,19 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+        <Navbar
+          collapseOnSelect
+          expand="md"
+          style={{ backgroundColor: "#3f4b5b" }}
+          variant="dark"
+        >
           <Container>
             <Navbar.Brand href="/">
               <img
                 src={logo}
                 height="50"
                 className="d-inline-block align-top"
-                alt="Logo"
+                alt="logo"
               />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />

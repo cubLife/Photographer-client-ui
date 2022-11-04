@@ -9,7 +9,6 @@ export default class PhotoSessionsLayout extends Component {
     super(props);
   }
   render() {
-    console.log(this.props.photoSessions);
     return (
       <div>
         <Container className="my-5 center">
