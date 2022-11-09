@@ -39,8 +39,8 @@ export default class Header extends Component {
                 <Nav.Link href="/photo-sessions">Portfolio</Nav.Link>
                 <Nav.Link href="/offers">Oferta</Nav.Link>
                 <Nav.Link href="/feedbacks">Opinie</Nav.Link>
-                <Nav.Link href="/regulations">Regulamin</Nav.Link>
                 <Nav.Link href="/contact">Kontakt</Nav.Link>
+                <Nav.Link href="/regulations">Regulamin</Nav.Link>
               </Nav>
               <Nav className="mr-auto"></Nav>
             </Navbar.Collapse>

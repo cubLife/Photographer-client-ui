@@ -1,0 +1,17 @@
+.mainContainer {
+  display: flex;
+  background-color: rgb(230, 241, 255);
+  min-height: 100vh;
+  justify-content: center;
+
+  .container {
+    width: 50em;
+    min-height: 100vh;
+    margin: 50px;
+
+    p {
+      margin-top: 20px;
+      text-align: justify;
+    }
+  }
+}
