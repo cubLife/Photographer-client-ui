@@ -1,13 +1,9 @@
-import axios from "axios";
 import React, { Component } from "react";
 import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PhotoSessionCard from "../photoSessionCard/PhotoSessionCard";
 
 export default class PhotoSessionsLayout extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div>

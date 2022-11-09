@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import AvatarImage from "../AvatarImage";
 import ContactCard from "../ContactCard";
 import ContactMessageForm from "../ContactMessageForm";
-import PersonalInformation from "../PersonalInformation";
 import SocialFollow from "../SocialFollow";
 
 export default class ContactLayout extends Component {

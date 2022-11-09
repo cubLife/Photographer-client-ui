@@ -15,6 +15,7 @@ export default class PersonalInformation extends Component {
       .then((response) => response.data)
       .then((data) => this.setState({ photographer: data }));
   }
+
   render() {
     return (
       <div>

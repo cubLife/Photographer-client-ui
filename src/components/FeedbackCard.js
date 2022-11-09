@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
-import axios from "axios";
+import { Card } from "react-bootstrap";
 import Rating from "@mui/material/Rating";
 
 export default class FeedbackCard extends Component {
