@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import CardGrid from "../components/Layout/PhotoAlbumLayout";
-import PhotoAlbumLayout from "../components/Layout/PhotoAlbumLayout";
 import PhotoSessionsLayout from "../components/Layout/PhotoSessionsLayout";
 
 export default class Portfolio extends Component {
