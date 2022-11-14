@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import SessionPackageLayout from "../../components/Layout/SessionPackageLayout";
 import axios from "axios";
-
 import "./offers.scss";
 
 const Offers = () => {

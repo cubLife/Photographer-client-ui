@@ -3,7 +3,7 @@ import "./offer.scss";
 import InsertPhotoOutlinedIcon from "@mui/icons-material/InsertPhotoOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import OrderForm from "../OrderForm";
 
 const OfferCard = ({ sessionPackage }) => {
