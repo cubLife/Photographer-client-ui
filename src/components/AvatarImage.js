@@ -10,8 +10,9 @@ export default class AvatarImage extends Component {
   }
 
   componentDidMount() {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     axios
-      .get("http://localhost:8081/api/avatar-images/photographer-id/1")
+      .get(`${BASE_URL}/avatar-images/photographer-id/1`)
       .then((response) => response.data)
       .then((data) => this.setState({ image: data._links }));
   }

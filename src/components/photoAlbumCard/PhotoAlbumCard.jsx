@@ -5,6 +5,7 @@ import "./photoAlbumCard.scss";
 
 export default class PhotoAlbumCard extends Component {
   render() {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     return (
       <div>
         <Link
@@ -15,7 +16,7 @@ export default class PhotoAlbumCard extends Component {
           <div className="albumCard">
             <img
               alt="icon"
-              src={`http://localhost:8081/api/photos/first-image/photo-album/${this.props.albumId}`}
+              src={`${BASE_URL}/photos/first-image/photo-album/${this.props.albumId}`}
               className="cardImg"
             />
             <div className="title">{this.props.name}</div>

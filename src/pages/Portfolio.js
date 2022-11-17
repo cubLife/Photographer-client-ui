@@ -11,9 +11,10 @@ export default class Portfolio extends Component {
     };
   }
   componentDidMount() {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     this.setState({ loading: true });
     axios
-      .get("http://localhost:8081/api/photo-sessions/list")
+      .get(`${BASE_URL}/photo-sessions/list`)
       .then((response) => response.data)
       .then((data) =>
         this.setState({

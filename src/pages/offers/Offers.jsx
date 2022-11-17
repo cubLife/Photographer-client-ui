@@ -6,12 +6,13 @@ import "./offers.scss";
 
 const Offers = () => {
   const [data, setData] = useState([]);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data: response } = await axios.get(
-          "http://localhost:8081/api/photo-session-packages/list"
+          `${BASE_URL}/photo-session-packages/list`
         );
         setData(response._embedded.photoSessionPackageDtoList);
       } catch (error) {

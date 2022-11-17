@@ -25,8 +25,9 @@ export default class OrderForm extends Component {
   }
 
   handleClick() {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     axios
-      .post("http://localhost:8081/api/orders", this.state.formData)
+      .post(`${BASE_URL}/orders`, this.state.formData)
       .then((response) => {
         this.setState({ errorResponse: {} });
         this.setState({ isOpen: true });

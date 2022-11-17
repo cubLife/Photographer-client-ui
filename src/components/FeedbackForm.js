@@ -22,8 +22,9 @@ const FeedbackForm = () => {
   }, [grade]);
 
   const handleSubmit = async () => {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     try {
-      await axios.post("http://localhost:8081/api/feedbacks", feedback);
+      await axios.post(`${BASE_URL}/feedbacks`, feedback);
       setError({});
       window.location.reload(false);
     } catch (error) {

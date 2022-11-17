@@ -33,7 +33,6 @@ function ContactMessageForm() {
   const [alertMessage, setAlertMessage] = React.useState("");
 
   const sendEmail = (data) => {
-    console.log(data);
     emailjs
       .send("service_e4pe6b8", "template_6k0qfkd", data, "ii9_8XyqV0SArSQGH")
       .then(

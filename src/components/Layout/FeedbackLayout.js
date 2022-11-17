@@ -12,8 +12,9 @@ export default class FeedbackLayout extends Component {
   }
 
   componentDidMount() {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     axios
-      .get("http://localhost:8081/api/feedbacks/list")
+      .get(`${BASE_URL}/feedbacks/list`)
       .then((response) => response.data)
       .then((data) =>
         this.setState({ feedbacks: data._embedded.costumerFeedbackDtoList })

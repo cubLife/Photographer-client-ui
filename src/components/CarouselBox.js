@@ -8,8 +8,9 @@ export default class CarouselBox extends Component {
   };
 
   componentDidMount() {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     axios
-      .get(`http://localhost:8081/api/carousel-images/list`)
+      .get(`${BASE_URL}/api/carousel-images/list`)
       .then((response) => response.data)
       .then((data) =>
         this.setState({ images: data._embedded.carouselImageDtoList })
