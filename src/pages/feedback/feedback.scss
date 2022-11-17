@@ -3,15 +3,14 @@
   display: flex;
 
   .left {
-    position: fixed;
-    max-height: 600px;
+    // position: fixed;
+    max-height: 500px;
     max-width: 350px;
     border-radius: 10px;
     border: 1px solid;
     border-color: black;
     flex: 2;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin: 40px;
     padding: 5px;
 
     .top {
@@ -20,9 +19,9 @@
       .title {
         color: rgb(63, 75, 91);
         text-align: center;
-        font-size: 20px;
-        margin-top: 30px;
-        margin-bottom: 40px;
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
   }
