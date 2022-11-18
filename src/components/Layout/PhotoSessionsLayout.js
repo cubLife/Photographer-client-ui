@@ -8,7 +8,7 @@ export default class PhotoSessionsLayout extends Component {
   render() {
     return (
       <div>
-        <Container className="my-5 center">
+        <Container className="my-4">
           <Row
             xs={1}
             md={2}

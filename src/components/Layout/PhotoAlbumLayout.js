@@ -30,7 +30,7 @@ const PhotoAlbumLayout = () => {
   return (
     <div>
       <Container className="my-5 center">
-        <Row xs={1} md={3} lg={4} className="g-4">
+        <Row xs={1} md={2} lg={4} className="g-4">
           {loading ? (
             <Placeholder />
           ) : (

@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
-import logo from "./logo-brand.png";
+import logo from "../logo-brand.png";
 import { BrowserRouter as Router } from "react-router-dom";
-import Home from "../pages/Home";
-import Portfolio from "../pages/Portfolio";
-import Contact from "../pages/Contact";
-import AlbumImages from "../pages/AlbumImages";
-import Feedback from "../pages/feedback/Feedback";
-import Regulations from "../pages/regulations/Regulations";
-import PhotoAlbumLayout from "./Layout/PhotoAlbumLayout";
-import Offers from "../pages/offers/Offers";
-import PageNotFound from "../pages/pageNotFound/PageNotFound";
+import Home from "../../pages/Home";
+import Portfolio from "../../pages/Portfolio";
+import Contact from "../../pages/Contact";
+import AlbumImages from "../../pages/AlbumImages";
+import Feedback from "../../pages/feedback/Feedback";
+import Regulations from "../../pages/regulations/Regulations";
+import PhotoAlbumLayout from "../Layout/PhotoAlbumLayout";
+import Offers from "../../pages/offers/Offers";
+import PageNotFound from "../../pages/pageNotFound/PageNotFound";
+import "./header.scss";
 
 export default class Header extends Component {
   render() {
@@ -35,12 +36,24 @@ export default class Header extends Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="/">O mnie</Nav.Link>
-                <Nav.Link href="/photo-sessions">Portfolio</Nav.Link>
-                <Nav.Link href="/offers">Oferta</Nav.Link>
-                <Nav.Link href="/feedbacks">Opinie</Nav.Link>
-                <Nav.Link href="/contact">Kontakt</Nav.Link>
-                <Nav.Link href="/regulations">Regulamin</Nav.Link>
+                <Nav.Link href="/" className="linkSize">
+                  O mnie
+                </Nav.Link>
+                <Nav.Link href="/photo-sessions" className="linkSize">
+                  Portfolio
+                </Nav.Link>
+                <Nav.Link href="/offers" className="linkSize">
+                  Oferta
+                </Nav.Link>
+                <Nav.Link href="/feedbacks" className="linkSize">
+                  Opinie
+                </Nav.Link>
+                <Nav.Link href="/contact" className="linkSize">
+                  Kontakt
+                </Nav.Link>
+                <Nav.Link href="/regulations" className="linkSize">
+                  Regulamin
+                </Nav.Link>
               </Nav>
               <Nav className="mr-auto"></Nav>
             </Navbar.Collapse>

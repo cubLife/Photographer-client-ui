@@ -13,11 +13,11 @@ export default class PhotographerInfo extends Component {
     return (
       <div>
         <Container className="mt-5">
-          <Row className="row row--35 align-items-center">
-            <Col lg={4} md={4}>
+          <Row md={1} lg={2} className="row row--35 align-items-center">
+            <Col>
               <AvatarImage />
             </Col>
-            <Col lg={7} md={7}>
+            <Col>
               <PersonalInformation />
             </Col>
           </Row>

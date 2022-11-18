@@ -61,7 +61,7 @@ class ImageViewer extends Component {
     return (
       <div className="imageViewer">
         <h1 className="title">{this.props.name}</h1>
-        <ImageList cols={4}>
+        <ImageList cols={3}>
           {images.map((item, index) => (
             <ImageListItem key={item.img}>
               <img

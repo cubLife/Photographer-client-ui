@@ -25,13 +25,9 @@ export default class FeedbackLayout extends Component {
     return (
       <div>
         <Container>
-          <Row>
-            <Col className="col-lg-6 mx-auto mt-4">
-              {this.state.feedbacks.map((feedback) => (
-                <FeedbackCard key={feedback.id} feedback={feedback} />
-              ))}
-            </Col>
-          </Row>
+          {this.state.feedbacks.map((feedback) => (
+            <FeedbackCard key={feedback.id} feedback={feedback} />
+          ))}
         </Container>
       </div>
     );

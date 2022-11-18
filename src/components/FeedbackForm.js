@@ -33,8 +33,8 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="mt-3">
-      <Container>
+    <div>
+      <Container style={{ width: "18rem" }}>
         <Form>
           <Row>
             <Col>
