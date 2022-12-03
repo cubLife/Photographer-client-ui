@@ -1,15 +1,14 @@
-FROM node:alpine
-
+FROM node:alpine AS build
 WORKDIR /app
-
-EXPOSE 3000
-
 COPY package*.json ./
-
 COPY yarn.lock ./
-
 RUN  yarn install --frozen-lockfile
-
 COPY . .
+RUN npm run build
 
-CMD ["npm", "start"]
+FROM node:alpine
+EXPOSE 3000
+RUN mkrir /app
+COPY --from=build /app/build /app
+RUN npm install -g serve
+CMD ["serve", "-s build"]
