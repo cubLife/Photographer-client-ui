@@ -8,7 +8,7 @@ RUN npm run build
 
 FROM node:alpine
 EXPOSE 3000
-RUN mkrir /app
+RUN mkdir /app
 COPY --from=build /app/build /app
 RUN npm install -g serve
 CMD ["serve", "-s build"]
