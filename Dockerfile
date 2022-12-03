@@ -1,7 +1,8 @@
 FROM node:alpine as build
 WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
 COPY package*.json ./
-RUN npm ci
+RUN yarn install --frozen-lockfile
 COPY . ./
 RUN npm run build
 
