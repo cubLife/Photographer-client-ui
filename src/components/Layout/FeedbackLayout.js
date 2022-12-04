@@ -12,7 +12,7 @@ export default class FeedbackLayout extends Component {
   }
 
   componentDidMount() {
-    const BASE_URL = "https://api.na-photo.pl/api";
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     axios
       .get(`${BASE_URL}/feedbacks/list`)
       .then((response) => response.data)
