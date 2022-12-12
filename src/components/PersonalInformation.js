@@ -20,10 +20,15 @@ export default class PersonalInformation extends Component {
   render() {
     return (
       <div>
-        <h1 className="font-weight-bolder x-large" style={{ color: "#3f4b5b" }}>
+        <h1
+          className="font-weight-bolder"
+          style={{ color: "#3f4b5b", fontSize: "50px", marginBottom: "20px" }}
+        >
           O Mnie
         </h1>
-        <p className="lead">{this.state.photographer.aboutMyself}</p>
+        <p className="lead" style={{ fontSize: "30px" }}>
+          {this.state.photographer.aboutMyself}
+        </p>
       </div>
     );
   }
