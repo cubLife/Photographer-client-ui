@@ -27,6 +27,16 @@ export default class Portfolio extends Component {
   render() {
     return (
       <div>
+        <h1
+          style={{
+            textAlign: "center",
+            color: "#3f4b5b",
+            marginTop: "30px",
+            fontSize: "40px",
+          }}
+        >
+          Portfolio
+        </h1>
         <PhotoSessionsLayout
           photoSessions={this.state.photoSessions}
           loading={this.state.loading}
