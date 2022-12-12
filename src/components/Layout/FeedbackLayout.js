@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import FeedbackCard from "../FeedbackCard";
+import FeedbackCard from "../feedbackCard/FeedbackCard";
 
 export default class FeedbackLayout extends Component {
   constructor(props) {
@@ -24,11 +24,9 @@ export default class FeedbackLayout extends Component {
   render() {
     return (
       <div>
-        <Container>
-          {this.state.feedbacks.map((feedback) => (
-            <FeedbackCard key={feedback.id} feedback={feedback} />
-          ))}
-        </Container>
+        {this.state.feedbacks.map((feedback) => (
+          <FeedbackCard key={feedback.id} feedback={feedback} />
+        ))}
       </div>
     );
   }

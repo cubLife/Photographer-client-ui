@@ -27,6 +27,8 @@
   }
 
   .right {
+    flex: 3;
+    justify-content: center;
     .top {
       text-align: center;
       .title {

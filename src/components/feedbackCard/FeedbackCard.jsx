@@ -18,7 +18,11 @@ export default class FeedbackCard extends Component {
     const feedback = this.props.feedback;
     return (
       <div>
-        <Card key={feedback.id} className="mt-3" style={{ width: "35rem" }}>
+        <Card
+          key={feedback.id}
+          className="mt-3"
+          style={{ width: "35rem", margin: "auto" }}
+        >
           <Card.Header>
             {`${feedback.firstName} ${feedback.lastName}`}
             <br />
