@@ -1,37 +1,51 @@
 import axios from "axios";
-import React, { Component } from "react";
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { getPlaceholders } from "../getPlaceholders";
 
-export default class AvatarImage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      image: [],
+const AvatarImage = () => {
+  const [image, setImage] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const placeholders = getPlaceholders(1, 950);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data: response } = await axios.get(
+          `${BASE_URL}/avatar-images/photographer-id/1`
+        );
+        setImage(response._links);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
     };
-  }
+    fetchData();
+  }, []);
 
-  componentDidMount() {
-    const BASE_URL = process.env.REACT_APP_BASE_URL;
-    axios
-      .get(`${BASE_URL}/avatar-images/photographer-id/1`)
-      .then((response) => response.data)
-      .then((data) => this.setState({ image: data._links }));
-  }
-
-  getImageLink() {
-    const self = Object.values(this.state.image);
+  const getImageLink = () => {
+    const self = Object.values(image);
     const href = Object.values(self).map((self) => self.href);
     return href;
-  }
+  };
 
-  render() {
-    return (
-      <div>
+  return (
+    <div>
+      {loading ? (
+        placeholders.map((placeholder) => placeholder)
+      ) : (
         <img
           className="w-100 shadow-lg p-1 mb-5 bg-white rounded"
-          src={this.getImageLink()}
+          src={getImageLink()}
           alt="About Images"
         />
-      </div>
-    );
-  }
-}
+      )}
+    </div>
+  );
+};
+
+export default AvatarImage;

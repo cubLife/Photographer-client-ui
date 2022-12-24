@@ -6,6 +6,7 @@ import "./offers.scss";
 
 const Offers = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
@@ -15,8 +16,11 @@ const Offers = () => {
           `${BASE_URL}/photo-session-packages/list`
         );
         setData(response._embedded.photoSessionPackageDtoList);
+        setLoading(false);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
@@ -25,7 +29,7 @@ const Offers = () => {
   return (
     <div>
       <div className="title">Dostępne pakiety</div>
-      <SessionPackageLayout sessionPackages={data} />
+      <SessionPackageLayout sessionPackages={data} loading={loading} />
     </div>
   );
 };

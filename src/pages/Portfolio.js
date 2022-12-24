@@ -1,47 +1,46 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PhotoSessionsLayout from "../components/Layout/PhotoSessionsLayout";
+import { useState } from "react";
+import { useEffect } from "react";
 
-export default class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      photoSessions: [],
-      loading: true,
+const Portfolio = () => {
+  const [photoSessions, setPhotoSessions] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data: response } = await axios.get(
+          `${BASE_URL}/photo-sessions/list`
+        );
+        setPhotoSessions(response._embedded.photoSessionDtoList);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
     };
-  }
-  componentDidMount() {
-    const BASE_URL = process.env.REACT_APP_BASE_URL;
-    this.setState({ loading: true });
-    axios
-      .get(`${BASE_URL}/photo-sessions/list`)
-      .then((response) => response.data)
-      .then((data) =>
-        this.setState({
-          photoSessions: data._embedded.photoSessionDtoList,
-        })
-      )
-      .then(this.setState({ loading: false }));
-  }
+    fetchData();
+  }, []);
 
-  render() {
-    return (
-      <div>
-        <h1
-          style={{
-            textAlign: "center",
-            color: "#3f4b5b",
-            marginTop: "30px",
-            fontSize: "40px",
-          }}
-        >
-          Portfolio
-        </h1>
-        <PhotoSessionsLayout
-          photoSessions={this.state.photoSessions}
-          loading={this.state.loading}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <h1
+        style={{
+          textAlign: "center",
+          color: "#3f4b5b",
+          marginTop: "30px",
+          fontSize: "40px",
+        }}
+      >
+        Portfolio
+      </h1>
+      <PhotoSessionsLayout photoSessions={photoSessions} loading={loading} />
+    </div>
+  );
+};
+
+export default Portfolio;

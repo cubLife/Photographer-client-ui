@@ -1,33 +1,40 @@
 import axios from "axios";
-import React, { Component } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { getPlaceholders } from "../../getPlaceholders";
 import FeedbackCard from "../feedbackCard/FeedbackCard";
 
-export default class FeedbackLayout extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      feedbacks: [],
+const FeedbackLayout = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data: response } = await axios.get(
+          `${BASE_URL}/feedbacks/list`
+        );
+        setData(response._embedded.costumerFeedbackDtoList);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
     };
-  }
+    fetchData();
+  }, []);
 
-  componentDidMount() {
-    const BASE_URL = process.env.REACT_APP_BASE_URL;
-    axios
-      .get(`${BASE_URL}/feedbacks/list`)
-      .then((response) => response.data)
-      .then((data) =>
-        this.setState({ feedbacks: data._embedded.costumerFeedbackDtoList })
-      );
-  }
+  const placeholders = getPlaceholders(3, 150);
 
-  render() {
-    return (
-      <div>
-        {this.state.feedbacks.map((feedback) => (
-          <FeedbackCard key={feedback.id} feedback={feedback} />
-        ))}
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      {loading
+        ? placeholders.map((placeholder) => placeholder)
+        : data.map((feedback) => (
+            <FeedbackCard key={feedback.id} feedback={feedback} />
+          ))}
+    </div>
+  );
+};
+export default FeedbackLayout;

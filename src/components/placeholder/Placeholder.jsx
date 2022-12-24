@@ -1,4 +1,5 @@
 import React from "react";
+import { Spinner } from "react-bootstrap";
 import PlaceholderBootstrap from "react-bootstrap/Placeholder";
 import "./placeholder.scss";
 

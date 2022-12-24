@@ -1,50 +1,74 @@
-import React, { Component } from "react";
-import { Card } from "react-bootstrap";
+import React from "react";
+import { Card, Spinner } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import axios from "axios";
-export default class ContactCard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      photographer: {},
+import { useState } from "react";
+import { useEffect } from "react";
+
+const ContactCard = () => {
+  const [photographer, setPhotographer] = useState({});
+  const [loading, setLoading] = useState(true);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data: response } = await axios.get(
+          `${BASE_URL}/photographers/1`
+        );
+        setPhotographer(response);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
     };
-  }
+    fetchData();
+  }, []);
 
-  componentDidMount() {
-    const BASE_URL = process.env.REACT_APP_BASE_URL;
-    axios
-      .get(`${BASE_URL}/photographers/1`)
-      .then((response) => response.data)
-      .then((data) => this.setState({ photographer: data }));
-  }
+  // componentDidMount() {
+  //   const BASE_URL = process.env.REACT_APP_BASE_URL;
+  //   axios
+  //     .get(`${BASE_URL}/photographers/1`)
+  //     .then((response) => response.data)
+  //     .then((data) => this.setState({ photographer: data }));
+  // }
 
-  render() {
-    return (
-      <div>
-        <Card border="light" className="mt-3 shadow-lg p-1 mb-5 bg-white right">
-          <Card.Body>
-            <Card.Title>
-              <i class="bi bi-telephone-outbound" />
+  return (
+    <div>
+      <Card border="light" className="mt-3 shadow-lg p-1 mb-5 bg-white right">
+        <Card.Body>
+          <Card.Title>
+            <i class="bi bi-telephone-outbound" />
+            {loading ? (
+              <Spinner animation="border" variant="info" size="sm" />
+            ) : (
               <a
-                href={"tel:" + this.state.photographer.phone}
+                href={"tel:" + photographer.phone}
                 className="text-black text-decoration-none"
               >
                 {" "}
-                {"  " + this.state.photographer.phone}
+                {"  " + photographer.phone}
               </a>
-            </Card.Title>
-            <Card.Title>
-              <i class="bi bi-envelope" />
+            )}
+          </Card.Title>
+          <Card.Title>
+            <i class="bi bi-envelope" />
+            {loading ? (
+              <Spinner animation="border" variant="info" size="sm" />
+            ) : (
               <a
-                href={"mailto:" + this.state.photographer.email}
+                href={"mailto:" + photographer.email}
                 className="text-black text-decoration-none text-reset"
               >
-                {"  " + this.state.photographer.email}
+                {"  " + photographer.email}
               </a>
-            </Card.Title>
-          </Card.Body>
-        </Card>
-      </div>
-    );
-  }
-}
+            )}
+          </Card.Title>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+};
+export default ContactCard;
